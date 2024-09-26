@@ -107,24 +107,24 @@ def m3():
 
 def m4():
     button1 = WebDriverWait(driver, 20).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="gender_component_group"]/label[4]'))
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="gender_component_group"]/label[1]'))
     )
     driver.execute_script("arguments[0].scrollIntoView();", button1)
     button1.click()
     button2 = WebDriverWait(driver, 20).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="age_component_group"]/label[2]'))
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="age_component_group"]/label[4]'))
     )
     driver.execute_script("arguments[0].scrollIntoView();", button2)
     button2.click()
 
 def m5():
     button1 = WebDriverWait(driver, 20).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="gender_component_group"]/label[5]'))
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="gender_component_group"]/label[1]'))
     )
     driver.execute_script("arguments[0].scrollIntoView();", button1)
     button1.click()
     button2 = WebDriverWait(driver, 20).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="age_component_group"]/label[2]'))
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="age_component_group"]/label[5]'))
     )
     driver.execute_script("arguments[0].scrollIntoView();", button2)
     button2.click()
@@ -201,7 +201,16 @@ def w6():
     driver.execute_script("arguments[0].scrollIntoView();", button2)
     button2.click()
 
+def lat():
+    button = WebDriverWait(driver, 20).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="ethnicity_component_group"]/label[7]'))
+    )
+    driver.execute_script("arguments[0].scrollIntoView();", button)
+    button.click()
+
 time.sleep(10)
+
+lat()
 
 # Loop para cada categoria de imagem
 for category_index in range(len(download_dirs)):
