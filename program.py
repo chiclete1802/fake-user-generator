@@ -214,7 +214,7 @@ lat()
 
 # Loop para cada categoria de imagem
 for category_index in range(len(download_dirs)):
-    for i in range(10):
+    for i in range(30):
         # Chame a função apropriada dependendo da categoria
         if category_index < 5:  # M2 a M6
             m_functions = [m2, m3, m4, m5, m6]
@@ -227,6 +227,6 @@ for category_index in range(len(download_dirs)):
         
         time.sleep(10)
         click_button()
-        time.sleep(5)
+        time.sleep(10)
 
 driver.quit()
